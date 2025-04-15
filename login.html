@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login | Airbnb Clone</title>
+    <style>
+        body { font-family: Arial; background: #f4f4f4; margin: 0; padding: 0; }
+        .container { max-width: 400px; margin: 60px auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
+        h2 { text-align: center; color: #ff5a5f; }
+        input[type="text"], input[type="password"] {
+            width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;
+        }
+        input[type="submit"] {
+            width: 100%; padding: 10px; background: #ff5a5f; color: white; border: none; border-radius: 5px; cursor: pointer;
+        }
+        .message { color: red; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        {% if messages %}
+            <div class="message">
+                {% for message in messages %}
+                    <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Username" required />
+            <input type="password" name="password" placeholder="Password" required />
+            <input type="submit" value="Login" />
+        </form>
+    </div>
+</body>
+</html>

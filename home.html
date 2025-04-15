@@ -1,0 +1,244 @@
+{% extends "main/base.html" %} 
+{% block title %} Airbnb {% endblock %}
+
+{% block style %}
+<style>
+    body {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: white;
+        color: #FF5A5F;
+        padding: 15px 0;
+        text-align: center;
+    }
+    
+    /* Small Navbar */
+    .small-navbar {
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+        margin-top: 10px;
+    }
+    .small-navbar a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: black;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 8px 12px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    .small-navbar a:hover {
+        background-color: #FF5A5F;
+        color: white;
+    }
+    
+    .listings {
+        display: flex;
+        justify-content: center;
+        margin: 40px 0;
+        flex-wrap: wrap;
+    }
+
+    .listing {
+    width: 250px;
+    height: 300px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+   
+    animation: fadeIn 0.8s ease-in-out;  
+}
+
+    @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+    .listing:nth-child(1) { animation-delay: 0.2s; }
+    .listing:nth-child(2) { animation-delay: 0.4s; }
+    .listing:nth-child(3) { animation-delay: 0.6s; }
+    .listing:nth-child(4) { animation-delay: 0.8s; }
+    .listing:nth-child(5) { animation-delay: 1s; }
+    .listing:nth-child(6) { animation-delay: 1.2s; }
+    .listing:nth-child(7) { animation-delay: 1.4s; }
+    .listing:nth-child(8) { animation-delay: 1.6s; }
+    .listing:nth-child(9) { animation-delay: 1.8s; }
+    .listing:nth-child(10) { animation-delay: 2s; }
+    .listing:nth-child(11) { animation-delay: 2.2s; }
+    .listing:nth-child(12) { animation-delay: 2.4s; }
+
+    .listing:hover {
+    transform: scale(1.05); /* Increased for a stronger effect */
+    box-shadow: 0 14px 20px rgba(0, 0, 0, 0.35); /* More elevation */
+}
+    .listing img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .listing-info {
+        padding: 10px;
+    }
+    .listing-info h3 {
+        margin: 0;
+        font-size: 16px;
+    }
+    .listing-info p {
+        font-size: 14px;
+        color: #777;
+    }
+    footer {
+        background-color: #f8f8f8;
+        padding: 20px;
+        text-align: center;
+        font-size: 14px;
+        color: #777;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+
+<!-- Listings Section -->
+<div class="listings">
+    <div class="listing">
+        <a href="{% url 'cozycottage' %}"> <img src="https://a0.muscache.com/im/pictures/miso/Hosting-668620215138733009/original/2e573684-fd2d-4046-b67a-2aae9b85a49c.jpeg?im_w=1200&im_format=avif"></a>
+        <div class="listing-info">
+            <h3>Manali, India</h3>
+            <p>2 guests • 1 bed</p>
+            <p><b>₹4,999 night </b></p>
+        </div>
+    </div>
+        <!-- Listing 2 -->
+ <div class="listing">
+    <a href="{%  url 'house' %}"><img src="https://a0.muscache.com/im/pictures/d585eb55-2c17-4b35-ac99-34c067602164.jpg?im_w=1200"></a>
+    <div class="listing-info">
+        <h3>Srinagar, India</h3>
+        <p>4 guests • 2 beds</p>
+        <p><b>₹3,500 night </b></p>
+    </div>
+</div>
+
+<!-- Listing 3 -->
+<div class="listing">
+    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-39327758/original/7425d87d-7cf4-458e-9483-3f86c08bba7f.jpeg?im_w=1200">
+    <div class="listing-info">
+        <h3>Goa, India</h3>
+        <p>6 guests • 3 beds</p>
+        <p><b>₹11,565 night </b></p>
+    </div>
+</div>
+
+<!-- Listing 4 -->
+<div class="listing">
+    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTIxMjI4MzMzNzEzNDc1ODQyNA%3D%3D/original/156e7d8d-0bd2-4b4b-94cc-4292bd287468.jpeg?im_w=1200">
+        <div class="listing-info">
+        <h3>Noida, India</h3>
+        <p>2 guests • 1 bed</p>
+        <p><b>₹5,850 night </b></p>
+    </div>
+</div>
+
+<!--Listing 5-->
+<div class="listing">
+    <img src="https://i.pinimg.com/736x/5a/2e/6a/5a2e6a79de2457fefd02deeeb9cbd765.jpg" alt="Listing 5">
+    <div class="listing-info">
+        <h3>Kinnaur, India</h3>
+        <p>4 guests • 2 beds</p>
+        <p><b>₹2,500 night </b></p>
+    </div>
+</div>
+<!--Listing 6-->
+<div class="listing">
+    <img src="https://i.pinimg.com/736x/83/a1/80/83a18021b6d4dc1a3df95ae203847d0f.jpg" alt="Listing 6">
+    <div class="listing-info">
+        <h3>Dehradun, India</h3>
+        <p>10 guests • 5 beds</p>
+        <p><b>₹5,670 night </b></p>
+    </div>
+</div>
+
+<!--Listing 7-->
+<div class="listing">
+    <img src="https://i.pinimg.com/736x/66/76/b9/6676b9530280e33720b5e45d0b71f3d8.jpg" alt="Listing 7">
+    <div class="listing-info">
+        <h3>Dharamshala, India</h3>
+        <p>12 guests • 8 beds</p>
+        <p><b>₹5,890 night </b></p>
+    </div>
+</div>
+
+<!--Listing 8-->
+<div class="listing">
+    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-904319036347745143/original/71405eff-d180-4f2a-9a2f-9c357635a9f2.jpeg?im_w=240" alt="Listing 8">
+    <div class="listing-info">
+        <h3>Kashmir, India</h3>
+        <p>6 guests • 3 beds</p>
+        <p><b>₹7,000 night </b></p>
+    </div>
+</div>
+
+<!--Listing 9-->
+<div class="listing">
+    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-47743066/original/ff7c4fb7-c256-4324-ac71-12968febf54b.jpeg?im_w=1200" alt="Listing 9">
+    <div class="listing-info">
+        <h3>Gurugram, India</h3>
+        <p>2 guests • 1 bed</p>
+        <p><b>₹5,200 night </b></p>
+    </div>
+</div>
+
+<!--Listing 10-->
+<div class="listing">
+    <img src="https://a0.muscache.com/im/pictures/963f0974-0bc6-489b-a4da-97bfcac8118c.jpg?im_w=1200" alt="Listing 10">
+    <div class="listing-info">
+        <h3>Shillong, India</h3>
+        <p>5 guests • 3 beds</p>
+        <p><b>₹8,750 night </b></p>
+    </div>
+</div>
+
+<!--Listing 11-->
+<div class="listing">
+    <img src="https://a0.muscache.com/im/pictures/0f1d3850-0c9a-4930-86b2-4467619714f5.jpg?im_w=1920" alt="Listing 11">
+    <div class="listing-info">
+        <h3>Mumbai, India</h3>
+        <p>10 guests • 6 beds</p>
+        <p><b>₹12,500 night </b></p>
+    </div>
+</div>
+
+<!--Listing 12-->
+<div class="listing">
+    <img src="https://a0.muscache.com/im/pictures/miso/Hosting-855086902950659893/original/0dad4c97-a351-454c-8f73-344762d5f8bc.png?im_w=1200" alt="Listing 12">
+    <div class="listing-info">
+        <h3>Delhi, India</h3>
+        <p>3 guests • 2 beds</p>
+        <p><b>₹7,600 night </b></p>
+    </div>
+</div>
+</div>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2025 Airbnb, Inc.</p>
+</footer>
+{%endblock%}

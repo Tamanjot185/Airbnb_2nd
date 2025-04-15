@@ -1,0 +1,105 @@
+{% extends "main/base.html" %} 
+{% block title %} amazing views| Airbnb {% endblock %}
+
+{% block style %}
+<style>
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.listings {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.listing {
+    width: 250px;
+    height: 300px; 
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.listing:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.listing img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.listing-info {
+    padding: 10px;
+}
+.listing-info h3 {
+    margin: 0;
+    font-size: 16px;
+}
+.listing-info p {
+    font-size: 14px;
+    color: #777;
+}
+footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="listings">
+    <div class="listing">
+        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-668620215138733009/original/2e573684-fd2d-4046-b67a-2aae9b85a49c.jpeg?im_w=1200&im_format=avif"></a>
+        <div class="listing-info">
+            <h3>Manali, India</h3>
+            <p>2 guests • 1 bed</p>
+            <p><b>₹4,999 night </b></p>
+        </div>
+    </div>
+
+    <div class="listing">
+        <img src="https://i.pinimg.com/736x/83/a1/80/83a18021b6d4dc1a3df95ae203847d0f.jpg" alt="Listing 2">
+        <div class="listing-info">
+            <h3>Dehradun, India</h3>
+            <p>10 guests • 5 beds</p>
+            <p><b>₹5,670 night </b></p>
+        </div>
+    </div>
+    <div class="listing">
+        <img src="https://a0.muscache.com/im/pictures/f5ceadbd-a34f-47d1-913f-7087a2c34398.jpg?im_w=720" alt="Listing 3">
+        <div class="listing-info">
+            <h3>Ooty, India</h3>
+            <p>8 guests • 4 beds</p>
+            <p><b>₹4,890 night </b></p>
+        </div>
+    </div>
+    <div class="listing">
+        <img src="https://a0.muscache.com/im/pictures/cba06c3e-f0e0-4ef0-b991-aa6fd2348c50.jpg?im_w=1200" alt="Listing 4">
+        <div class="listing-info">
+            <h3>Shimla, India</h3>
+            <p>4 guests • 2 beds</p>
+            <p><b>₹3,800 night </b></p>
+        </div>
+    </div>
+
+</div>
+<footer>
+    <p>&copy; 2025 Airbnb, Inc.</p>
+</footer>
+{%endblock%}

@@ -1,0 +1,105 @@
+{% extends "main/base.html" %} 
+{% block title %} Beaches | airbnb {% endblock %}
+
+{% block style %}
+<style>
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.listings {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.listing {
+    width: 250px;
+    height: 300px; 
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.listing:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.listing img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.listing-info {
+    padding: 10px;
+}
+.listing-info h3 {
+    margin: 0;
+    font-size: 16px;
+}
+.listing-info p {
+    font-size: 14px;
+    color: #777;
+}
+footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="listings">
+    <div class="listing">
+        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-39327758/original/7425d87d-7cf4-458e-9483-3f86c08bba7f.jpeg?im_w=1200"></a>
+        <div class="listing-info">
+            <h3>Goa, India</h3>
+            <p>6 guests • 3 beds</p>
+            <p><b>₹9,700 night </b></p>
+        </div>
+    </div>
+
+    <div class="listing">
+        <img src="https://a0.muscache.com/im/ml/photo_enhancement/pictures/miso/Hosting-999635090558170644/original/5a6789f8-f775-4169-a4a6-1042bff7b31a.jpeg?im_w=720" alt="Listing 2">
+        <div class="listing-info">
+            <h3>Kerala, India</h3>
+            <p>8 guests • 5 beds</p>
+            <p><b>₹5,500 night </b></p>
+        </div>
+    </div>
+    <div class="listing">
+        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1353210841086390070/original/e9973d84-258f-4ee8-84f8-89be75d6444a.jpeg?im_w=720" alt="Listing 3">
+        <div class="listing-info">
+            <h3>Goa, India</h3>
+            <p>2 guests • 2 beds</p>
+            <p><b>₹7,000 night </b></p>
+        </div>
+    </div>
+    <div class="listing">
+        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-45092475/original/363dda4e-6446-4bfb-bfe4-6917e791a5d2.jpeg?im_w=720" alt="Listing 4">
+        <div class="listing-info">
+            <h3>Port Blair, India</h3>
+            <p>4 guests • 2 beds</p>
+            <p><b>₹6,500 night </b></p>
+        </div>
+    </div>
+
+</div>
+<footer>
+    <p>&copy; 2025 Airbnb, Inc.</p>
+</footer>
+{%endblock%}

@@ -1,0 +1,114 @@
+{% extends "main/base2.html" %}
+{% block title %} Srinagar Houseboats | Srinagar {% endblock %}
+
+{% block style %}
+
+<style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        
+            
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .hotel-header {
+            text-align: center;
+            padding: 10px 0;
+            background-color: white;
+            color: black;
+            box-shadow: 0 2px 5px black;
+        }
+        .main-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .gallery {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 24%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .details {
+            margin-top: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .price-book {
+            margin-top: 20px;
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .price-book button {
+            background-color: #FF5A5F;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .price-book:hover {
+        box-shadow: 0 2px 5px grey;
+        border: solid black;
+        cursor: pointer;
+        -webkit-text-fill-color: #FF5A5F;
+        }
+        .dropdown-item:hover {
+        -webkit-text-fill-color:#FF5A5F;
+        }
+
+</style>
+
+{% endblock %}
+{% block content %}
+<header class="hotel-header">
+    <h1><b>Srinagar Houseboats| Srinagar</b></h1>
+</header>
+
+<div class="container">
+    <div class="main-image">
+        <img src="https://a0.muscache.com/im/pictures/d585eb55-2c17-4b35-ac99-34c067602164.jpg?im_w=1200" alt="Hotel Main Image">
+    </div>
+
+    <div class="gallery">
+        <img src="https://a0.muscache.com/im/pictures/3aeda047-27f2-4355-a587-fca97fa3e681.jpg?im_w=720" alt="Gallery Image 1">
+        <img src="https://a0.muscache.com/im/pictures/dabbd8db-8c51-4d1b-b464-a56fa6eb3c89.jpg?im_w=1200" alt="Gallery Image 2">
+        <img src="https://a0.muscache.com/im/pictures/2888a38e-43fa-4077-9901-b7e055b7a21b.jpg?im_w=720" alt="Gallery Image 3">
+        <img src="https://a0.muscache.com/im/pictures/58be7d70-95c9-4220-a336-02c4879c94b8.jpg?im_w=720" alt="Gallery Image 4">
+    </div>
+
+    <div class="details">
+        <h2>Srinagar Houseboats, Srinagar</h2>
+        <p><strong>Guests:</strong> 4 guests</p>
+        <p><strong>Beds:</strong> 1 bedrooms, 4 beds</p>
+        <p><strong>Bathroom:</strong> 2 bathrooms</p>
+        <p><strong>Rating:</strong> ⭐ 4.33(9 reviews)</p>
+        <p>Nothing is better than traveling with peace right?</p>
+    </div>
+
+    <div class="price-book">
+        <a class="dropdown-item" href="#">
+            <h2>Reserve Now</h2>
+        </a>
+    </div>
+</div>
+
+{%endblock%}
